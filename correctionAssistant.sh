@@ -37,6 +37,7 @@ process_file(){
     if ! grep -q "$studentNameNoSpaces" openedStudents.txt; then
         fileWithSlash="/$2"
         cd "${1//$fileWithSlash/}" 
+        idea.sh .
         # run_program "$2"
         cd "$3"
         echo "$studentNameNoSpaces" >> openedStudents.txt
